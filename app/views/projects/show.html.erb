@@ -1,0 +1,13 @@
+<div class='container'>
+  <p>
+    <strong>Name:</strong>
+    <%= @project.name %>
+  </p>
+
+  <p>
+    <strong>Client:</strong>
+    <%= @project.clients.name %>
+  </p>
+
+  <%= link_to 'Edit', edit_client_project_path(@client, @project), class: 'btn btn-primary' %>
+</div>

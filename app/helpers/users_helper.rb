@@ -2,10 +2,6 @@
 
 module UsersHelper
   def enable_or_disable(user)
-    if user.enabled
-      'Disable'
-    else
-      'Enable'
-    end
+    user.enabled? ? 'Disabled' : 'Enabled'
   end
 end

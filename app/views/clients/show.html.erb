@@ -1,0 +1,13 @@
+<div class='container'>
+  <%= render 'shared/navbarback' %>
+  <dl>
+    <dt><strong>Name</strong></dt>
+    <dd><%= @client.name %></dd>
+
+    <dt><strong>Affiliation</strong></dt>
+    <dd><%= @client.affiliation %></dd>
+  </dl>
+
+  <%= link_to 'Edit', edit_client_path(@client), class: 'btn btn-primary' %>
+  <%= render template: 'projects/index' %>
+</div>

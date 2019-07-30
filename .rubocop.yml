@@ -2,6 +2,7 @@ AllCops:
   Exclude:
     - config/environments/development.rb
     - config/initializers/devise.rb
+    - db/schema.rb
 
 Style/MixinUsage:
   Exclude:
@@ -30,6 +31,3 @@ Metrics/LineLength:
 Metrics/MethodLength:
   Exclude:
     - db/**/*
-
-Metrics/AbcSize:
-  Enabled: false

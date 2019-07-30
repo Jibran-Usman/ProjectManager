@@ -1,0 +1,27 @@
+<%= form_with(model: project, url: client_projects_path(@client), local: true) do |form| %>
+  <% if project.errors.any? %>
+    <div id="error_explanation alert alert-danger">
+      <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <p class='form-group'>
+    <%= form.select :client_id, Client.all.map { |u| [u.name, u.id] },
+      class: 'form-control' %>
+  </p>
+
+  <div class='form-group'>
+    <%= form.submit 'Submit', class: 'btn btn-primary' %>
+  </div>
+<% end %>

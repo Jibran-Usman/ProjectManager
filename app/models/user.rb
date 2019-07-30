@@ -13,7 +13,7 @@ class User < ApplicationRecord
   enum role: { user: 'user', admin: 'admin', manager: 'manager' }
 
   def active_for_authentication?
-    super && enabled
+    super && enabled?
   end
 
   def inactive_message

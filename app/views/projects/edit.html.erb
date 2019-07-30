@@ -1,0 +1,6 @@
+<div class='container'>
+  <%= render 'shared/navbarback' %>
+  <h1>Editing Project</h1>
+  <%= render 'form', project: @project %>
+  <%= link_to 'Show', client_project_path(@client, @project), class: 'btn btn-primary' %>
+</div>

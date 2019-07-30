@@ -8,8 +8,10 @@ class WelcomeController < ApplicationController
   def redirect_user_role
     if current_user.admin?
       redirect_to admin_user_path(current_user)
+    elsif current_user.manager?
+      redirect_to manager_user_path(current_user)
     else
-      redirect_to base_user_path(current_user)
+      redirect_to user_path(current_user)
     end
   end
 end
